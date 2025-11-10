@@ -8,15 +8,57 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+     <div class="container">
+    <!-- Заголовок секції -->
+    <div class="header">
+      <h1>Наші меблі</h1>
+      <p>Знайдіть ідеальні рішення для вашого інтер'єру</p>
+    </div>
 
-    <load src="./partials/footer.html" />
+    <!-- Блок зі списком категорій -->
+ 
+
+      <!-- Список карток з категоріями -->
+      <div class="categories-grid" id="categoriesGrid"></div>
+
+      <!-- Обрана категорія -->
+      <div class="selected-category" id="selectedCategory">
+        <span style="color: #6b7280; font-size: 14px;">Обрана категорія:</span>
+        <div class="category-badge">
+          <span id="selectedCategoryName"></span>
+          <svg class="close-btn" id="clearCategory" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Стан завантаження / порожньо -->
+   
+
+    <!-- Список карток з меблями -->
+   
+
+    <!-- Кнопка "Показати ще" / "Більше меблів немає" -->
+  
+  <!-- Модальне вікно з детальною інформацією -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-close" id="modalClose">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </div>
+      <img class="modal-image" id="modalImage" src="" alt="">
+      <div class="modal-details">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <div class="modal-info" id="modalInfo"></div>
+        <p class="modal-description" id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
 
     <script type="module" src="./main.js"></script>
   </body>
